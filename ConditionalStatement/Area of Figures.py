@@ -2,6 +2,8 @@ import math
 
 type = input()
 
+
+
 if type == "square":
     side = float(input())
     square_area = math.pow(side, 2)
