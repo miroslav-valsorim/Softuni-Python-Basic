@@ -1,5 +1,5 @@
-persons_gender = str(input())
-persons_age = int(input())
+persons_age = float(input())
+persons_gender = input()
 
 if persons_gender == "m":
     if persons_age >= 16:
