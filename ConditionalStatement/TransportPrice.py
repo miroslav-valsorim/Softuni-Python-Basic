@@ -12,17 +12,26 @@ price_night = km * taxi_night + taxi_start
 price_bus = km * bus
 price_train = km * train
 
-if day_time == "day":
-    if km <= 20:
+if km < 20:
+    if day_time == "day":
         print(f"{price_day:.2f}")
-    elif 20 <= km <= 100:
-        print(f"{price_bus:.2f}")
-    elif km >= 100:
-        print(f"{price_train:.2f}")
-elif day_time == "night":
-    if km <= 20:
+    elif day_time == "night":
         print(f"{price_night:.2f}")
-    elif 20 <= km <= 100:
-        print(f"{price_bus:.2f}")
-    elif km >= 100:
+elif 20 <= km < 100:
+    if day_time == "day":
+        if price_bus <= price_day:
+            print(f"{price_bus:.2f}")
+        elif price_day <= price_night:
+            print(f"{price_day:.2f}")
+    elif day_time == "night":
+        if price_bus <= price_day:
+            print(f"{price_bus:.2f}")
+        elif price_day <= price_night:
+            print(f"{price_night:.2f}")
+elif km >= 100:
+    if day_time == "day":
+        if price_train <= price_bus <= price_day <= price_night:
+            print(f"{price_train:.2f}")
+    elif day_time == "night":
+        if price_train <= price_bus <= price_day <= price_night:
             print(f"{price_train:.2f}")
