@@ -1,2 +1,2 @@
 # Softuni-Python-Basic
-Basic exercises
+Softuni Basic | exercises
