@@ -51,4 +51,4 @@ elif month == "July" or month == "August":
         price_apartment = apartment * nights
 
 print(f"Apartment: {price_apartment:.2f} lv.")
-print(f"Studio: {price_studio:.2f} lv.") 
+print(f"Studio: {price_studio:.2f} lv.")
