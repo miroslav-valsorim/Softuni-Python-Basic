@@ -13,17 +13,17 @@ even_min = sys.maxsize
 for number in range(1, n + 1):
     new_number = float(input())
     if number % 2 == 0:
-        even_sum += number
-        if number > even_max:
-            even_max = number
-        if number < even_min:
-            even_min = number
+        even_sum += new_number
+        if new_number > even_max:
+            even_max = new_number
+        if new_number < even_min:
+            even_min = new_number
     else:
-        odd_sum += number
-        if number > odd_max:
-            odd_max = number
-        if number < odd_min:
-            odd_min = number
+        odd_sum += new_number
+        if new_number > odd_max:
+            odd_max = new_number
+        if new_number < odd_min:
+            odd_min = new_number
 
 print(f"OddSum={odd_sum:.2f},")
 
