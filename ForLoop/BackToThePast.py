@@ -3,13 +3,14 @@ year_to_live = int(input())
 
 years_old = 0
 money_left = 0
+years_old = 18
 
 for year in range(1800, year_to_live + 1):
     if year % 2 == 0:
         money -= 12000
     else:
-        years_old = year - 1782
         money -= (12000 + years_old * 50)
+    years_old += 1
 
 
 if money >= 0:
