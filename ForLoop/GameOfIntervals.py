@@ -7,7 +7,6 @@ int_three = 0
 int_four = 0
 int_five = 0
 int_six = 0
-bonus = 0
 
 for numbers in range(1, how_many_numbers + 1):
     n = int(input())
@@ -26,11 +25,11 @@ for numbers in range(1, how_many_numbers + 1):
         sum_of_numbers += bonus
     elif 30 <= n <= 39:
         int_four += 1
-        bonus += 50
+        bonus = 50
         sum_of_numbers += bonus
     elif 40 <= n <= 50:
         int_five += 1
-        bonus += 100
+        bonus = 100
         sum_of_numbers += bonus
     else:
         int_six += 1
