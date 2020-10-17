@@ -1,23 +1,20 @@
-eggs_in_store = int(input())
-
-sold = 0
-
-while True:
-
+egg_count = int(input())
+command = ""
+eggs_sold = 0
+while command != "Close":
     command = input()
-    eggs = int(input())
-
-    if command == "Fill":
-        eggs_in_store += eggs
-    elif command == "Buy":
-        eggs_in_store -= eggs
-        sold += eggs
-        if eggs_in_store < 0:
-            print(f"Not enough eggs in store!")
-            print(f"You can buy only {eggs_in_store}")
-            break
-
     if command == "Close":
-        print(f"Store is closed!")
-        print(f"{sold} eggs sold.")
+        print(f'Store is closed!')
+        print(f'{eggs_sold} eggs sold.')
         break
+    order = int(input())
+    if command == "Buy":
+        if egg_count >= order:
+            egg_count -= order
+            eggs_sold += order
+        else:
+            print(f'Not enough eggs in store!')
+            print(f'You can buy only {egg_count}.')
+            break
+    elif command == "Fill":
+        egg_count += order
