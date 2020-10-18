@@ -17,4 +17,4 @@ while command != "Close":
             print(f'You can buy only {egg_count}.')
             break
     elif command == "Fill":
-        egg_count += order
+        egg_count += order 
