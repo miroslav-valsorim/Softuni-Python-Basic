@@ -1,4 +1,5 @@
 target_height = int(input())
+
 current_height = target_height - 30
 bad_tries = 0
 got_the_height = False
