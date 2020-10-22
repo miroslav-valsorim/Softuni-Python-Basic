@@ -24,6 +24,6 @@ while tournament != "End of tournaments":
 
     tournament = input()
 
-if tournament == "End of tournaments":
-    print(f"{((total_won / total_played) * 100):.2f}% matches win")
-    print(f"{((total_lost / total_played) * 100):.2f}% matches lost")
+#if tournament == "End of tournaments":
+print(f"{((total_won / total_played) * 100):.2f}% matches win")
+print(f"{((total_lost / total_played) * 100):.2f}% matches lost")
