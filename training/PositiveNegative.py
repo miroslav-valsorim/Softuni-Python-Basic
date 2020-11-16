@@ -1,11 +1,17 @@
 MILL = 1 * 10 ** 6
 ZERO = 0
+ONE = 1
 
 a = float(input())
 
 if a < ZERO:
-    pass
+    print("negative")
 elif a > ZERO:
-    pass
+    print("positive")
 else:
-    pass
+    print("zero")
+
+if abs(a) < ONE:
+    print("small")
+elif abs(a) > MILL:
+    print("large")
